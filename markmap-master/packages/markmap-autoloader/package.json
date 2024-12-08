@@ -1,0 +1,46 @@
+{
+  "name": "markmap-autoloader",
+  "version": "0.17.2",
+  "description": "Load markmaps automatically in HTML",
+  "author": "Gerald <gera2ld@live.com>",
+  "license": "MIT",
+  "keywords": [
+    "markmap",
+    "markdown",
+    "mindmap"
+  ],
+  "homepage": "https://github.com/markmap/markmap/packages/markmap-autoloader#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markmap/markmap.git"
+  },
+  "scripts": {
+    "clean": "del-cli dist",
+    "build:types": "tsc",
+    "build:js": "vite build",
+    "build": "run-s clean build:*",
+    "prepublishOnly": "run-s build"
+  },
+  "bugs": {
+    "url": "https://github.com/markmap/markmap/issues"
+  },
+  "main": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "jsdelivr": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "markmap-common": "*"
+  },
+  "devDependencies": {
+    "markmap-common": "workspace:*",
+    "markmap-lib": "workspace:*",
+    "markmap-toolbar": "workspace:*",
+    "markmap-view": "workspace:*"
+  }
+}
